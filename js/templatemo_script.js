@@ -1,6 +1,5 @@
 /* 
-Zoom Template 
-http://www.templatemo.com/preview/templatemo_414_zoom
+
 */
 
 var menuDisabled = false;
