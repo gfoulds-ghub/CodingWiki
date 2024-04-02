@@ -38,11 +38,6 @@ jQuery(function($) {
                     $(this).removeClass("active");
                     $(name+"-section").show('size',{easing: 'easeOutQuart', duration: 400},function(){
                         $(this).addClass("active");
-                        
-                        // google map need to resize for animate contents
-                        google.maps.event.trigger(map, 'resize'); // resize map
-                        $.backstretch("resize"); // resize the background image
-                        menuDisabled = false;
                      });
                 });                
             }
