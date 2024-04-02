@@ -52,22 +52,3 @@ jQuery(function($) {
     });
 
 });
-
-var map = '';
-
-function initialize() {
-    var mapOptions = {
-      zoom: 14,
-      center: new google.maps.LatLng(16.8496189,96.1288854)
-    };
-    map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
-}
-
-function loadGoogleMap(){
-    // load google map
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-        'callback=initialize';
-    document.body.appendChild(script);
-}
