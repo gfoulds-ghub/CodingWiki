@@ -5,7 +5,8 @@ body {
 #pageheading {
     color: #000000;
     position: relative;
-    padding: 50px 30% 30% 0px;
+    padding-top: 30px;
+    padding-left: 30%;
 }
 
 .headingdivs {
