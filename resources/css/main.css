@@ -4,6 +4,7 @@ body {
 
 #pageheading {
     color: #000000;
+    position: relative;
 }
 
 .headingdivs {
