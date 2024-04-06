@@ -6,5 +6,6 @@ body {
     color: #000000;
     font-size: 5vw;
     position: relative;
-    padding-left: 50%;
+    padding-left: auto;
+    padding-right: auto;
 }
