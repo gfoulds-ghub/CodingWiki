@@ -6,4 +6,5 @@ body {
 
 #pageheading {
     color: #000000;
+    display: inline-block;
 }
