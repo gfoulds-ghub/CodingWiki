@@ -1,22 +1,22 @@
 body {
-    background-color: #b8b8b8;
+    background-color: #000000;
 }
 
 #pageheading {
-    color: #000000;
+    color: #ffffff;
     font-size: 2.5vw;
     text-align: center;
 }
 
 #pagesubheading {
-    color: #000000;
+    color: #ffffff;
     font-size: 2.5vw;
     text-align: center;
 }
 
 .menubutton {
     border: 2px dashed lightskyblue;
-    color: white;
+    color: rgb(118, 118, 118);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
