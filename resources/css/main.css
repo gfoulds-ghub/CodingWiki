@@ -15,7 +15,7 @@ body {
 }
 
 .menubutton {
-    border: none;
+    border: 2px dashed lightskyblue;
     color: white;
     padding: 15px 32px;
     text-align: center;
