@@ -14,19 +14,6 @@ body {
     text-align: center;
 }
 
-.menubutton {
-    border: 3.5px solid lightskyblue;
-    background-color: rgb(118, 118, 118);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-    border-radius: 30px;
-  }
-
   .menuitems {
     border: 3.5px solid lightskyblue;
     background-color: rgb(118, 118, 118);
