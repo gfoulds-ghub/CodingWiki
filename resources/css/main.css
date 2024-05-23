@@ -18,28 +18,27 @@ body {
     text-align: center;
 }
 
-.menubutton {
-    border: 3.5px solid lightskyblue;
-    background-color: rgb(118, 118, 118);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-    border-radius: 30px;
-  }
+.menuitems {
+    color: #ffffff;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
 
-  .menuitems {
-    border: 3.5px solid lightskyblue;
-    background-color: rgb(118, 118, 118);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 24px;
-    margin: 0 100px;
-    cursor: pointer;
-    border-radius: 30px;
-  }
+.menuitems:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.3s ease 0s left 0.3s ease 0s;
+    width: 0;
+}
+
+.menuitems:hover:after {
+    width: 100%;
+    left: 0;
+}
