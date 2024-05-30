@@ -185,6 +185,172 @@
                     </div>
                 </article>
             </section>
+            <section id="git">
+                <h2>Git Cheat-sheet</h2>
+                <article id="view">
+                    <h3>Viewing</h3>
+                    <div>
+                        <pre>git log --oneline</pre>
+                        <p>shows most concise history format</p>
+                        <a href="https://git-scm.com/docs/git-log">git reference</a>
+                    </div>
+                    <div>
+                        <pre>git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=human</pre>
+                        <p>shows a practical format</p>
+                    </div>
+                </article>
+                <article id="create">
+                    <h3>Creating and Committing</h3>
+                    <div>
+                        <pre>git init</pre>
+                        <p>creates local repository<em>--don't forget .gitignore</em></p>
+                    </div>
+                    <div>
+                        <pre>git clone &lt;http | https | ssh | git URL&gt;</pre>
+                        <p>(http and git don't require credentials)</p>
+                    </div>
+                    <div>
+                        <pre>git add -A [-v]</pre>
+                        <p>adds, modifies, and removes entries to match working tree</p>
+                        <a href="https://git-scm.com/docs/git-add">git reference</a>
+                    </div>
+                    <div>
+                        <pre>git add -u [-v]</pre>
+                        <p>removes and modifies entries to match working tree; adds nothing</p>
+                    </div>
+                    <div>
+                        <pre>git rm <i>&lt;file&gt;</i></pre>
+                        <p>removes file from working tree and index</p>
+                    </div>
+                    <div>
+                        <pre>git commit -m <i>"Message"</i></pre>
+                        <p>commits working tree to branch</p>
+                        <a href="https://git-scm.com/docs/git-commit">git reference</a>
+                        <a href="https://chris.beams.io/posts/git-commit/#seven-rules">rules</a>
+                    </div>
+                    <div>
+                        <pre>git commit --amend -m <i>"New message"</i></pre>
+                        <p>add changes and/or changes message to last commit</p>
+                    </div>
+                </article>
+                <article id="branch">
+                    <h3>Branching and Merging</h3>
+                    <div>
+                        <pre>git branch -vva</pre>
+                        <p>lists all local and remote branches</p>
+                    </div>
+                    <div>
+                        <pre>git branch <i>&lt;branch-name&gt;</i></pre>
+                        <p>creates new branch</p>
+                    </div>
+                    <div>
+                        <pre>git branch -d <i>&lt;branch-name&gt;</i></pre>
+                        <p>deletes local branch</p>
+                    </div>
+                    <div>
+                        <pre>git checkout <i>&lt;branch-name&gt;</i></pre>
+                        <p>checks out local branch</p>
+                    </div>
+                    <div>
+                        <pre>git checkout -b <i>&lt;branch-name&gt;</i></pre>
+                        <p>shortcut for git branch + git checkout &lt;branch-name&gt</p>
+                    </div>
+                    <div>
+                        <pre>git merge <i>&lt;branch-name&gt;</i></pre>
+                        <p>merges branch-name into current checked-out branch</p>
+                    </div>
+                    <div>
+                        <pre>git merge --abort</pre>
+                        <p>aborts merge during conflict resolution</p>
+                    </div>
+                </article>
+                <article id="stash">
+                    <h3>Stashing</h3>
+                    <div>
+                        <pre>git stash</pre>
+                        <p>stashes local changes and cleans working directory</p>
+                    </div>
+                    <div>
+                        <pre>git stash list</pre>
+                        <p>lists stashes, newest on top</p>
+                    </div>
+                    <div>
+                        <pre>git stash pop</pre>
+                        <p>applies changes to working directory and removes stash</p>
+                    </div>
+                    <div>
+                        <pre>git stash apply [<i>stash-name</i>]</pre>
+                        <p>applies changes but keeps stash</p>
+                    </div>
+                    <div>
+                        <pre>git stash drop [<i>stash-name</i>]</pre>
+                        <p>deletes stash</p>
+                    </div>
+                </article>
+                <article id="undo">
+                    <h3>Undoing</h3>
+                    <div>
+                        <pre>git checkout <i>file/to/restore.ext</i></pre>
+                        <p>restores a file to the last committed version</p>
+                    </div>
+                    <div>
+                        <pre>git reset HEAD <i>file/to/unstage.ext</i></pre>
+                        <p>clears staging area of staged changes without changing working copy</p>
+                        <a href="https://git-scm.com/docs/git-reset">git reference</a>
+                    </div>
+                    <div>
+                        <pre>git reset --hard &lt;HEAD | 7-hash-digits&gt;</pre>
+                        <p>replaces working copy files with last or specified commit, moves HEAD</p>
+                    </div>
+                    <div>
+                        <pre>git revert &lt;HEAD | 7-hash-digits&gt;</pre>
+                        <p>produces new commit with changes to revert to last or specified commit</p>
+                    </div>
+                </article>
+                <article id="remote">
+                    <h3>Remote</h3>
+                    <div>
+                        <pre>git remote add <i>upstream</i> &lt;http | https | ssh | git URL&gt;</pre>
+                        <p>adds remote repository</p>
+                    </div>
+                    <div>
+                        <pre>git remote -v</pre>
+                        <p>lists remote repositories with URLs</p>
+                    </div>
+                    <div>
+                        <pre>git fetch <i>origin</i></pre>
+                        <p>updates local information about the remote</p>
+                    </div>
+                    <div>
+                        <pre>git pull [<i>upstream master</i>]</pre>
+                        <p>fetches and merges remote commits</p>
+                    </div>
+                    <div>
+                        <pre>git checkout --track <i>origin/branch-name</i></pre>
+                        <p>creates and checks out local branch with same name as remote</p>
+                    </div>
+                    <div>
+                        <pre>git push [-u <i>origin branch-name</i>]</pre>
+                        <p>uploads local commits to remote, [optional] required if not tracked</p>
+                    </div>
+                    <div>
+                        <pre>git push origin --delete <i>branch-name</i></pre>
+                        <p>deletes remote branch</p>
+                    </div>
+                </article>
+                <article id="config">
+                    <h3>Configuring</h3>
+                    <div>
+                        <pre>git config --list [--local|--global][ | sort]</pre>
+                        <p>shows current configuration</p>
+                        <a href="https://git-scm.com/docs/git-config">git reference</a>
+                    </div>
+                    <div>
+                        <pre>git config [--global] core.editor <i>/path/to/editor</i></pre>
+                        <p>selects editor for blank commit comment</p>
+                    </div>
+                </article>
+            </section>
         </main>
     </body>
 </html>
